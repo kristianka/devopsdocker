@@ -1,0 +1,13 @@
+note! i'm running on windows but the windows command didn't work. I used the command first shown. I am using though new PowerShell 7!
+
+--- window 1 ---
+docker run -it ubuntu sh -c 'while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website; done'
+
+
+--- window 2 ---
+docker exec frosty_wu apt-get update
+docker exec frosty_wu apt-get install curl -y
+
+
+--- window 1 ---
+helsinki.fi

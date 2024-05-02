@@ -1,0 +1,17 @@
+--- window 1 ---
+docker run devopsdockeruh/simple-web-service:ubuntu 
+
+
+--- window 2 ---
+docker exec -it e2ac981099f5afd1f7ce2e4a25222b68c276cb6293d92e816702d9c1e93ac45d bash
+tail -f ./text.log
+
+    Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+    2024-05-01 22:16:44 +0000 UTC
+    2024-05-01 22:16:46 +0000 UTC
+    2024-05-01 22:16:48 +0000 UTC
+    2024-05-01 22:16:50 +0000 UTC
+    2024-05-01 22:16:52 +0000 UTC
+    Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+    2024-05-01 22:16:54 +0000 UTC
+    2024-05-01 22:16:56 +0000 UTC
