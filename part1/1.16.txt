@@ -1,0 +1,3 @@
+used same docker as in prev exercise. Adding frontend to it would be pretty complex (at the moment), so only backend.
+
+https://github.com/kristianka/fullstack-project/tree/docker-backend/backend
