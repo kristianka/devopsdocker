@@ -1,0 +1,13 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!Dockerfile
+!.dockerignore
+docker-compose.yml
+
+# get code from https://github.com/docker-hy/material-applications/tree/main/example-frontend
+
+
+server
