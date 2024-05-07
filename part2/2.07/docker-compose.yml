@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+
+  ex-fe:
+    container_name: ex-fe
+    build:
+      context: ./example-frontend
+      dockerfile: ./Dockerfile
+    ports:
+      - 5000:5000
+    environment:
+      - REQUEST_ORIGIN=ttp://localhost:5000
+
+  ex-be:
+    container_name: ex-be
+    build:
+      context: ./example-backend
+      dockerfile: ./Dockerfile
+    ports:
+      - 8080:8080
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:8080
+      # get values from redis container
+      - REDIS_HOST=redis
+      # get values from postgres container
+      - POSTGRES_HOST=postgres
+
+  redis:
+    image: redis:7.2.4-alpine
+    container_name: redis
+    build:
+      context: ./redis
+  # no ports! we don't want to expose the databases to the outside world!!!
+
+  postgres:
+    image: postgres:13.2-alpine
+    container_name: postgres_db
+    build: 
+      context: ./postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./postgres-database:/var/lib/postgresql/data
+  # no ports! we don't want to expose the databases to the outside world!!!
+
+
+# relies on on the Dockerfiles from the directories
+# no volumes because it doesn't save any data
