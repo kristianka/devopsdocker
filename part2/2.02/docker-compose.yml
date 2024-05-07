@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+
+  simple-web-service:
+    image: devopsdockeruh/simple-web-service
+    build: .
+    container_name: simple-web-service
+    ports:
+      - 8080:8080
+    command: ["server"]
+
+# command can be added with the following syntax, for example:
+# command: ["server"]
+# you may need to delete old simple-web-service
