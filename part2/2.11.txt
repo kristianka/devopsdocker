@@ -1,5 +1,0 @@
-this was pain to setup, for some reason i got errors with node modules and files were not updating when making changes :(
-
-I dockerized a react frontend and express backend dev envs
-see docker-compose for comments
-https://github.com/kristianka/fullstack-project/tree/docker-backend

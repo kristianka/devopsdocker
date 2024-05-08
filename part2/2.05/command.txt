@@ -1,3 +1,0 @@
-three load balances are enough:
-
-docker compose up --scale compute=3
