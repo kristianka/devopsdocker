@@ -1,0 +1,7 @@
+Image size got a lot smaller with multistage. Took a while though.
+
+Before:
+    Backend: 447.43 MB
+
+After:
+    Backend: 18.04 MB (!)
