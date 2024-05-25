@@ -1,0 +1,10 @@
+Image size barely if at all went down with chaining RUN commands and removing apt lists.
+This will be fixed in next part when changing to alpine versions of the images.
+
+Before:
+    Frontend: 556.09 MB
+    Backend: 1.06 GB
+
+After:
+    Frontend: 553.43 MB
+    Backend: 1.06 GB

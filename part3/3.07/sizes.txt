@@ -1,0 +1,10 @@
+Frontend was already using alpine version, so the size is same.
+Backend's size was halved which is nice.
+
+Before:
+    Frontend: 553.43 MB
+    Backend: 1.06 GB
+
+After:
+    Frontend: 553.43 MB
+    Backend: 447.43 MB
